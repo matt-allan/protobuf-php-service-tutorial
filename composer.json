@@ -1,0 +1,17 @@
+{
+    "name": "yuloh/protobuf-php-services-example",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+    	"psr-4": {
+    		"": "gen",
+            "Yuloh\\Math\\": "src"
+    	}
+    },
+    "scripts": {
+    	"gen-proto": "protoc --php_out=./gen ./proto/math.proto"
+    },
+    "require": {
+        "google/protobuf": "v3.5.1.1"
+    }
+}

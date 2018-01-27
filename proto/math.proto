@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package yuloh.math;
+
+option php_generic_services = true;
+
+service Calculator {
+    rpc add (AddRequest) returns (AddReply) {}
+    rpc subtract (SubtractRequest) returns (SubtractReply) {}
+}
+
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddReply {
+    int32 sum = 1;
+}
+
+message SubtractRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message SubtractReply {
+    int32 diff = 1;
+}
